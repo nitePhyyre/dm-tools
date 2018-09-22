@@ -1,0 +1,21 @@
+<div>
+    <nav>
+        <a [routerLink]=" ['./'] " routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            Home
+        </a>
+        <a [routerLink]=" ['./tables'] " routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            Tables Management
+        </a>
+        <a [routerLink]=" ['./encounters'] " routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            Encounter Management
+        </a>
+        <a [routerLink]=" ['./combat'] " routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            Combat Management
+        </a>
+    </nav>
+</div>
+<div>
+    <main>
+        <router-outlet></router-outlet>
+    </main>
+</div>
