@@ -1,0 +1,15 @@
+<div>
+    <div>
+        <h2>Players</h2>
+        <dm-character-table [(characterService)]="playersService" [columns]="playerColumns"></dm-character-table>
+    </div>
+    <div *ngFor="let faction of factions">
+        <h2>{{ faction.name }} <button (click)="removeSide(faction)">X</button></h2>
+        <div>
+            <p-dropdown [options]="encountersService.encounters" [(ngModel)]="faction.encounter" placeholder="Select an encounter"></p-dropdown>
+        </div>
+        <add-monster [(characterService)]="faction.encounter"></add-monster>
+        <dm-character-table (SelectedCharacterChange)="selectCharacter($event)" [(characterService)]="faction.encounter"
+            [columns]="monsterColumns"></dm-character-table>
+    </div>
+</div>

@@ -1,3 +1,12 @@
 <div>
-  {{ tables | json }}
+  <div *ngFor="let table of tables">
+    <p (click)="selectedTable = table">{{ table.name }}</p>
+  </div>
+  <div *ngIf="selectedTable !== undefined">
+    <dm-tools-view-table [table]="selectedTable"></dm-tools-view-table>
+  </div>
+  <input type="button" (click)="showAddDialog()" title="Add" value="Add">
+  <p-dialog header="Title" [(visible)]="display">
+    <dm-tools-add-table (NewTableCreated)="addTableToService($event)"></dm-tools-add-table>
+  </p-dialog>
 </div>

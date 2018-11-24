@@ -1,0 +1,13 @@
+div.stat-block {
+    border-bottom: 1px solid black;
+}
+
+input.initInput[type=text] {
+    width: 2em;
+}
+input:read-only {
+    border: 0;
+}
+td {
+    padding: 5px;
+}

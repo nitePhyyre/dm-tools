@@ -1,11 +1,15 @@
 import * as _ from 'lodash';
 
 export class Table {
-    public TableRows: Array<TableRow>;
+    public name: string;
+    public displayPriority: number;
+    public rows: Array<TableRow>;
 
     public constructor() {
-        this.TableRows = [];
+        this.name = '';
+        this.rows = [];
     }
+
     /**
      * addRow
      */
@@ -13,17 +17,17 @@ export class Table {
         if (newRow.startRange > newRow.endRange) {
             throw new Error('Start range must be less than or equal to end range');
         }
-        if (_.some(this.TableRows, (row: TableRow) => row.endRange >= newRow.startRange)) {
+        if (_.some(this.rows, (row: TableRow) => row.endRange >= newRow.startRange)) {
             throw new Error('New table rows must have a higher start than all other row\'s finish');
         }
-        this.TableRows.push(newRow);
+        this.rows.push(newRow);
     }
 
     /**
      * removeRow
      */
     public removeRow() {
-        this.TableRows.pop();
+        this.rows.pop();
     }
 }
 

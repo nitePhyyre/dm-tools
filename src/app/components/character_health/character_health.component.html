@@ -1,0 +1,5 @@
+<div>
+    <button *ngIf="shouldShowControls" (click)="updateCharacterHealth(character, 1)">-</button>
+    {{ character.hit_points - character.damage }} / {{ character.hit_points }}
+    <button *ngIf="shouldShowControls" (click)="updateCharacterHealth(character, -1)">+</button>
+</div>

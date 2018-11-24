@@ -1,0 +1,19 @@
+<div>
+    <div class="ui-g">
+        <div class="ui-g-4">
+            <dm-current-combatants [factions]="factions" (SelectedCharacterChange)="selectedCharacters = $event"></dm-current-combatants>
+        </div>
+        <div class="ui-g-8">
+            <dm-current-initiative [data]="combatants" [columns]="monsterColumns" [selectedCharacters]="selectedCharacters"></dm-current-initiative>
+        </div>
+        <div>
+            <button pButton *ngIf="!showAddFactionInput" color="primary" title="Add faction" label="Add faction"
+                (click)="this.showAddFactionInput = true"></button>
+            <div *ngIf="showAddFactionInput">
+                <input #addFactionInput alt="Press enter to save" (keyup.enter)="addFaction(addFactionInput.value)" />
+                {{ addFactionInput.focus() }}
+                <!-- This somehow makes it focus when its is painted onto screen -->
+            </div>
+        </div>
+    </div>
+</div>

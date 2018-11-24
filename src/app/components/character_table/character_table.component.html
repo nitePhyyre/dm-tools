@@ -1,0 +1,41 @@
+<div *ngIf="characterService">
+    <table>
+        <thead>
+            <tr>
+                <th *ngFor="let column of columns">{{ column.header }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let character of characterService.data | async">
+                <td *ngFor="let column of columns" [ngSwitch]="column.field">
+                    <ng-container *ngSwitchCase="'editableName'">
+                        <textarea [rows]="2" [cols]="20" pInputTextarea autoResize="autoResize" [ngModel]="character.name"
+                            (ngModelChange)="updateCharacterName(character, $event)">
+                            </textarea>
+                    </ng-container>
+                    <ng-container *ngSwitchCase="'hp'">
+                        <character-health [(characterService)]="characterService" [character]="character"></character-health>
+                    </ng-container>
+                    <ng-container *ngSwitchCase="'init'">
+                        <input type="text" class="initInput" pInputText [ngModel]="character.init" (ngModelChange)="character.init = $event * 1" />
+                    </ng-container>
+                    <ng-container *ngSwitchCase="'monster_stats'">
+                        <button pButton type="button" icon="fa-search" (click)="selectCharacter(character)"></button>
+                        <!-- <button pButton type="button" icon="fa-pencil" class="ui-button-success" (click)="true"></button> -->
+                        <button pButton type="button" icon="fa-times" class="ui-button-danger" (click)="removeCharacter(character)"></button>
+                    </ng-container>
+                    <ng-container *ngSwitchDefault>
+                        {{ character[column.field] }}
+                    </ng-container>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- <p-overlayPanel #op3 [appendTo]="body">
+        <ng-container *ngIf="selectedCharacter">
+            <span *ngFor="let character of selectedCharacters">
+                <dm-character-info [character]="character"></dm-character-info>
+            </span>
+        </ng-container>
+    </p-overlayPanel> -->
+</div>

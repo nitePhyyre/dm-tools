@@ -1,0 +1,49 @@
+<div class="ui-g">
+    <div class="ui-g-3">
+        <div>
+            <p-dropdown [options]="encountersService.encounters" [(ngModel)]="selectedEncounter" placeholder="Select an encounter"></p-dropdown>
+            <input pInputText type="text" placeholder="Create new encounter" [(ngModel)]="newEncounterName">
+            <button pButton type="button" class="ui-button-success" icon="fa-check" (click)="createNewEncounter(newEncounterName)"></button>
+        </div>
+        <div *ngIf="selectedEncounter">
+            <h4>Encounter Details</h4>
+            <div>
+                <ul>
+                    <li *ngFor="let monster of selectedEncounter.data | async">{{monster.name}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="ui-g-9">
+        <input pInputText type="text" placeholder="Monster name" (input)="dataTable.filter($event.target.value, 'name', 'contains')">
+        <p-table #dataTable [value]="monsterManual" sortMode="multiple">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th [pSortableColumn]="'originalName'">Name<p-sortIcon [field]="'originalName'"></p-sortIcon></th>
+                    <th [pSortableColumn]="'type'">Type<p-sortIcon [field]="'type'"></p-sortIcon></th>
+                    <th [pSortableColumn]="'alignment'">Alignment<p-sortIcon [field]="'alignment'"></p-sortIcon></th>
+                    <th [pSortableColumn]="'size'">Size<p-sortIcon [field]="'size'"></p-sortIcon></th>
+                    <th [pSortableColumn]="'armor_class'">AC<p-sortIcon [field]="'armor_class'"></p-sortIcon></th>
+                    <th [pSortableColumn]="'hit_dice'">Hit Dice<p-sortIcon [field]="'hit_dice'"></p-sortIcon></th>
+                    <th [pSortableColumn]="'cr'">CR<p-sortIcon [field]="'cr'"></p-sortIcon></th>
+                    <th></th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-monster>
+                <tr>
+                    <td>{{monster.originalName}}</td>
+                    <td>{{monster.type}} <span *ngIf="monster.subtype.length > 0">({{monster.subtype}})</span></td>
+                    <td>{{monster.alignment}}</td>
+                    <td>{{monster.size}}</td>
+                    <td>{{monster.armor_class}}</td>
+                    <td>{{monster.hit_dice}}</td>
+                    <td>{{monster.cr}}</td>
+                    <td>
+                        <button pButton type="button" icon="fa-search" (click)="showMonsterInfo(monster)"></button>
+                        <button pButton type="button" class="ui-button-success" icon="fa-plus" (click)="addMonsterToEncounter(selectedEncounter, monster)"></button>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</div>

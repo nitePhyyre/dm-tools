@@ -1,0 +1,63 @@
+<div class="ui-g current-round-container">
+    <div class="ui-g-7">
+        <p-tabView>
+            <p-tabPanel header="Currently Active">
+                <div *ngIf="currentRound >= 0">
+                    <dm-character-info [character]="currentCombatant | async"></dm-character-info>
+                </div>
+            </p-tabPanel>
+            <p-tabPanel [closable]="true" (onClose)="handleTabPanelClose($event)" *ngFor='let selectedCharacter of selectedCharacters'
+                header="{{ selectedCharacter.originalName }}">
+                <div *ngIf="currentRound >= 0 && selectedCharacter != undefined">
+                    <dm-character-info [character]="selectedCharacter"></dm-character-info>
+                </div>
+            </p-tabPanel>
+        </p-tabView>
+    </div>
+    <div class="ui-g-5">
+        <div>
+            <div *ngIf="currentTurn >= 0">
+                <button (click)="currentTurn = currentTurn - 1">&lt;</button>
+                Round {{ currentRound + 1 }} - Turn {{ currentTurn + 1 }}
+                <button (click)="currentTurn = currentTurn + 1">&gt;</button>
+            </div>
+            <button *ngIf="currentTurn == -1" (click)="currentRound = currentRound + 1; currentTurn = currentTurn + 1">Next
+                Round</button>
+            <button *ngIf="currentRound >= 0" (click)="currentRound = -1; currentTurn = -1">Finish Combat</button>
+        </div>
+        <div *ngIf="currentTurn >= 0">
+            <p-table [value]="combatants | async" [responsive]="true" sortField="init" [sortOrder]="-1">
+                <ng-template pTemplate="body" let-character>
+                    <tr>
+                        <td>{{ character.name }}</td>
+                        <td>{{ character.init }}</td>
+                        <td>
+                            <span [class.took-action]="currentTurn > i">
+                                <character-health [character]="character" [shouldShowControls]="false"></character-health>
+                            </span>
+                        </td>
+                    </tr>
+                </ng-template>
+                <!-- <p-column field="name" header="Name" [style]="{width: '50%'}">
+                    <ng-template let-character="rowData" let-i="rowIndex" pTemplate="body" class="TestClass">
+                        <span [class.took-action]="currentTurn > i">{{ character.originalName }}</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="init" header="Init" [style]="{ width: '15%' }">
+                    <ng-template let-character="rowData" let-i="rowIndex" pTemplate="body" class="TestClass">
+                        <span [class.took-action]="currentTurn > i">{{ character.init }}</span>
+                    </ng-template>
+                </p-column>
+                <p-column field="hit_points" header="HP" [style]="{ width: '35%' }">
+                    <ng-template let-character="rowData" let-i="rowIndex" pTemplate="body">
+                        <button (click)="character.takeDamage(1)">-</button>
+                        <span [class.took-action]="currentTurn > i">
+                            <character-health [character]="character" [shouldShowControls]="false"></character-health>
+                        </span>
+                        <button (click)="character.gainLife(1)">+</button>
+                    </ng-template>
+                </p-column> -->
+            </p-table>
+        </div>
+    </div>
+</div>

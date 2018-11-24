@@ -1,0 +1,117 @@
+<div class="character-info-container">
+    <div class="character-info-header">
+        <h1>
+            {{ character?.originalName }}
+        </h1>
+        <h4>
+            {{ character?.size }} {{ character?.subtype }} {{ character?.type }}, {{ character?.alignment }}
+        </h4>
+        <h4>
+            AC {{ character?.armor_class }}
+        </h4>
+    </div>
+    <p-panel header="Stats & Race" [toggleable]="true" [collapsed]="true">
+        <div class="stat-block">
+            <div><label>Armor Class</label> <span>{{ character?.armor_class }}</span></div>
+            <div><label>Hit Points</label> <span>{{ character?.hit_points }} ({{ character?.hit_dice }})</span></div>
+            <div *ngIf="character?.speed?.length > 0">
+                <label>Speed</label>
+                <ul>
+                    <li *ngFor="let spd of character?.speed">{{ spd.terrain }}: {{ spd.distance }}</li>
+                </ul>
+            </div>
+                
+            <div *ngIf="character?.senses?.length > 0">
+                <label>Senses</label>
+                <ul>
+                    <li *ngFor="let sense of character?.senses">{{ sense.sense }}: {{ sense.distance }}</li>
+                </ul>
+            </div>
+        </div>
+    </p-panel>
+    <p-panel header="Skills & Features" [toggleable]="true" [collapsed]="true">
+        <div class="stat-block ability-scores ui-g">
+            <div class="ui-g-2">
+                <div>Str</div>
+                <div>{{ character?.strength }} ({{ character?.strengthModifier }})</div>
+            </div>
+            <div class="ui-g-2">
+                <div>Dex</div>
+                <div>{{ character?.dexterity }} ({{ character?.dexterityModifier }})</div>
+            </div>
+            <div class="ui-g-2">
+                <div>Con</div>
+                <div>{{ character?.constitution }} ({{ character?.constitutionModifier }})</div>
+            </div>
+            <div class="ui-g-2">
+                <div>Int</div>
+                <div>{{ character?.intelligence }} ({{ character?.intelligenceModifier }})</div>
+            </div>
+            <div class="ui-g-2">
+                <div>Wis</div>
+                <div>{{ character?.wisdom }} ({{ character?.wisdomModifier }})</div>
+            </div>
+            <div class="ui-g-2">
+                <div>Cha</div>
+                <div>{{ character?.charisma }} ({{ character?.charismaModifier }})</div>
+            </div>
+            <div *ngIf="character?.resist?.length > 0">
+                <label>Damage Resistance:</label>
+                {{ character?.resist }}
+            </div>
+            <div *ngIf="character?.resist?.length > 0">
+                <label>Damage Resistance:</label>
+                {{ character?.resist }}
+            </div>
+            <div *ngIf="character?.immune?.length > 0">
+                <label>Damage Immunities:</label>
+                {{ character?.immune }}
+            </div>
+            <div *ngIf="character?.conditionImmune?.length > 0">
+                <label>Condition Immunities:</label>
+                {{ character?.conditionImmune }}
+            </div>
+            <div *ngIf="character?.languages?.length > 0">
+                <label>Languages</label>
+                <ul>
+                    <li *ngFor="let language of character?.languages">{{ language }}</li>
+                </ul>
+            </div>
+            <div class="skills ui-g-12">
+                <div *ngIf="character?.skills?.length > 0">
+                    <label>Skills</label>
+                    <ul>
+                        <li *ngFor="let skill of character?.skills">{{ skill.skill }}: {{ skill.proficiency }}</li>
+                    </ul>
+                </div>
+            </div>
+            <div *ngIf="character?.cr?.length > 0">
+                <label>Challenge {{ character?.cr }} ({{ getXpValue(character?.cr) }} XP)</label>
+            </div>
+        </div>
+    </p-panel>
+    <p-panel header="Attacks & Actions" [toggleable]="true">
+            <div class="stat-block">
+                <div class="traits" *ngIf="character?.traits?.length > 0">
+                    <div *ngFor="let trait of character?.traits"><b>{{ trait.name }}</b> {{ trait.text }}</div>
+                </div>
+                <div class="actions" *ngIf="character?.actions?.length > 0">
+                    <h2>Actions</h2>
+                    <div *ngFor="let trait of character?.actions"><b>{{ trait.name }}</b> {{ trait.text }}</div>
+                </div>
+                <div class="legendary-actions" *ngIf="character?.legendary_actions?.length > 0">
+                    <h2>Legendary Actions</h2>
+                    <div *ngFor="let trait of character?.legendary_actions"><b>{{ trait.name }}</b> {{ trait.text }}</div>
+                </div>
+                <div class="reactions" *ngIf="character?.reactions?.length > 0">
+                    <h2>Reactions</h2>
+                    <div *ngFor="let trait of character?.reactions"><b>{{ trait.name }}</b> {{ trait.text }}</div>
+                </div>
+            </div>
+    </p-panel>
+    <p-panel header="Notes" [toggleable]="true">
+            <div class="stat-block">
+                <textarea [(ngModel)]="character.notes"></textarea>
+            </div>
+    </p-panel>
+</div>

@@ -1,0 +1,29 @@
+<div>
+  <h4>Add Table!!</h4>
+  <div>
+    <p-selectButton [options]="types" [(ngModel)]="diceSize"></p-selectButton>
+  </div>
+  <div *ngIf="diceSize > 0 ">
+    <div>
+      <input type="text" placeholder="Table name" [(ngModel)]="table.name">
+    </div>
+    <p-tabView>
+      <p-tabPanel header="Add rows">
+        <div *ngFor="let row of table.rows">
+          <input type="text" placeholder="start" [(ngModel)]="row.startRange">
+          <input type="text" placeholder="finish" [(ngModel)]="row.endRange" (blur)="addTableRow()">
+          <input type="text" placeholder="name" [(ngModel)]="row.name">
+          <input type="text" placeholder="description" [(ngModel)]="row.description">
+          <input type="text" placeholder="fullText" [(ngModel)]="row.fullText">
+        </div>
+      </p-tabPanel>
+      <p-tabPanel header="Mass add rows">
+        <h6>Format: &lt;start&gt;-&lt;end&gt;|&lt;name&gt;|&lt;desc&gt;|&lt;full text&gt;</h6>
+        <textarea [(ngModel)]="massAddRowsText"></textarea>
+      </p-tabPanel>
+    </p-tabView>
+    <div>
+      <button pButton type="button" label="Save" (click)="addNewTable()"></button>
+    </div>
+  </div>
+</div>

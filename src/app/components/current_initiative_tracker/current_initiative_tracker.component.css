@@ -1,0 +1,8 @@
+.took-action {
+    text-decoration: line-through;
+}
+
+.current-round-container {
+    position: sticky;
+    top: 15px;
+}

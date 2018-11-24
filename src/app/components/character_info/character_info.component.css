@@ -1,0 +1,33 @@
+/* .ui-g {
+    height: 23.5rem;
+}
+
+.stat-block {
+    overflow: auto;
+}
+
+h1, h4 {
+    margin: 10px 0;
+}
+.character-info-container {
+    width: 45rem;
+    height: 30rem;
+    overflow: hidden;
+}
+
+.character-info-header {
+    padding: 0.5rem;
+} */
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+}
+
+.skills ul{
+    columns: 2;
+}
+
+* >>> .ui-panel-content-wrapper{
+    max-height: 200px;
+    overflow: auto;
+}

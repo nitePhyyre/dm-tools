@@ -1,0 +1,15 @@
+<button mat-mini-fab color="primary" title="Roll Initiatives" (click)="rollMonsterInitiatives()">Roll Initiatives</button>
+<div>
+    <p-autoComplete 
+        appendTo="body" 
+        [(ngModel)]="searchTerm" 
+        [suggestions]="searchResults" 
+        (completeMethod)="search($event)"
+        (onSelect)="selectMonster($event)"
+        placeholder="Monster name"
+        field="name"
+        (keyup.enter)="addMonster(name)">
+    </p-autoComplete>
+    <input [(ngModel)]="qty" placeholder="Quantity">
+    <button color="primary" title="Add Monster" (click)="addMonster()">Add</button>
+</div>

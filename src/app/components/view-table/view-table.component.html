@@ -1,0 +1,18 @@
+<div>
+  <h2>{{ table.name }}</h2>
+  <table>
+    <tr *ngFor="let row of table.rows">
+      <td>{{ row.startRange }}</td>
+      <td>{{ row.endRange }}</td>
+      <td>{{ row.name }}</td>
+      <td>
+        <p>
+          {{ row.description }}
+        </p>
+        <p>
+          {{ row.fullText }}
+        </p>
+      </td>
+    </tr>
+  </table>
+</div>
