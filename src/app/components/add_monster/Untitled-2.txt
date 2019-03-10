@@ -1,0 +1,58 @@
+<h1>Heures d’ouverture Période des fêtes 2018-2019</h1>
+<h4>DÉCEMBRE 2018:</h4>
+<table style="padding: 10px 0 0 10px;">
+    <tbody>
+        <tr>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">17 18, 19, 20, 21 Décembre</td>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">6h00 -22h30 (Gym et terrains ferment à 22h00)<br>UT : 6h30-9h30  /  20h00-22h00</td>
+        </tr>
+        <tr>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">22, 23 Décembre</td>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">8h00-19h00 (Gym et terrains ferment à 18h30)
+			UT: 8h00-10:00 / 16h30-18h30</td>
+        </tr>
+        <tr>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">24 Décembre</td>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">6h00-15h00 (Gym et terrains ferment à 14h30)
+UT: 6h30-9h30 / 12h30-14h30</td>
+        </tr>
+        <tr>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">25 Décembre</td>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">FERMÉ</td>
+        </tr>
+        <tr>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">26 Décembre</td>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">8h00-19h00 (Gym et terrains ferment à 18h30) <br> UT: 8h00-10:00 / 16h30-18h30</td>
+        </tr>
+        <tr>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">27, 28, 29 Décembre</td>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">6h00 – 22h30 (Gym et terrains ferment à 22h00) <br> UT: 6h30-9h30 / 20h00-22h00</td>
+        </tr>
+        <tr>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">30 Décembre</td>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">8h00-19h00 (Gym et terrains ferment à 18h30) <br> UT: 8h00-10:00 / 16h30-18h30</td>
+        </tr>
+        <tr>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">31 Décembre</td>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">6h00-15h00 (Gym et terrains ferment à 14h30) <br> UT: 6h30-9h30 / 12h30-14h30</td>
+        </tr>
+    </tbody>
+</table>
+<h4>JANVIER 2019:</h4>
+<table style="padding: 10px 0 0 10px;">
+    <tbody>
+        <tr>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">1 Janvier</td>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">CLOSED</td>
+        </tr>
+        <tr>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">2 Janvier</td>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">8h00-19h00 (Gym et terrains ferment à 18h30) <br> UT: 8h00-10:00 / 16h30-18h30</td>
+        </tr>
+        <tr>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">3 & 4 Janvier</td>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">6h00 -22h30 (Gym et terrains ferment à 22h00) <br> UT : 6h30-9h30  /  20h00-22h00</td>
+        </tr>
+    </tbody>
+</table>
+<h1>JOYEUSES FÊTES</h1>

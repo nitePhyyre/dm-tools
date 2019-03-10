@@ -13,6 +13,8 @@ export class Character {
     public armorType: string;
     public hitPoints: number;
     public hitDice: string;
+    public hit_points: number;
+    public hit_dice: string;
     public speed: any[];
     public strength: number;
     public dexterity: number;

@@ -27,10 +27,10 @@
         </div>
         <div *ngIf="currentTurn >= 0">
             <p-table [value]="combatants | async" [responsive]="true" sortField="init" [sortOrder]="-1">
-                <ng-template pTemplate="body" let-character>
+                <ng-template pTemplate="body" let-character let-i="rowIndex">
                     <tr>
-                        <td>{{ character.name }}</td>
-                        <td>{{ character.init }}</td>
+                        <td><span [class.took-action]="currentTurn > i">{{ character.name }}</span></td>
+                        <td><span [class.took-action]="currentTurn > i">{{ character.init }}</span></td>
                         <td>
                             <span [class.took-action]="currentTurn > i">
                                 <character-health [character]="character" [shouldShowControls]="false"></character-health>

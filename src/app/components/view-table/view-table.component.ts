@@ -13,5 +13,4 @@ export class ViewTableComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

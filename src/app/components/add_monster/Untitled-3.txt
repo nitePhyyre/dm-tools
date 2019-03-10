@@ -1,0 +1,48 @@
+<h1>Horaire des classes de conditionnement physique Période des fêtes / Holiday Group Fitness class schedule 2018-2019</h1>
+<h4>Décembre/December 2018:</h4>
+<table style="padding: 10px 0 0 10px;">
+    <tbody>
+        <tr>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">24 décembre/December</td>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">Toutes les classes sont annulées/all classes are cancelled</td>
+        </tr>
+        <tr>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">25 décembre/December</td>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">FERMÉ/CLOSED</td>
+        </tr>
+        <tr>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">26 décembre/December	</td>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">Toutes les classes sont annulées/all classes are cancelled</td>
+        </tr>
+        <tr>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">27 décembre/December</td>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">Trampoline avec/with George à 12h00 <br> Bootcamp spin avec/with Genevieve à 12h00 <br>Power pump avec Bobby/with à 18h00</td>
+        </tr>
+        <tr>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">28 décembre/December</td>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">Functional training avec/with George à 12h00</td>
+        </tr>
+        <tr>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">29 décembre/December</td>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">Toutes les classes sont annulées/all classes are cancelled</td>
+        </tr>
+        <tr>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">31 décembre/December</td>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">Toutes les classes sont annulées/all classes are cancelled</td>
+        </tr>
+    </tbody>
+</table>
+<h4>Janvier/January 2019:</h4>
+<table style="padding: 10px 0 0 10px;">
+    <tbody>
+        <tr>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">1 janvier/January</td>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">FERMÉ/CLOSED</td>
+        </tr>
+        <tr>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">2 janvier/January</td>
+            <td style="padding: 0 15px 20px 0px; vertical-align: top;">Toutes les classes sont annulées/all classes are cancelled</td>
+        </tr>
+    </tbody>
+</table>
+<h1>JOYEUSES FÊTES / HAPPY HOLIDAYS</h1>

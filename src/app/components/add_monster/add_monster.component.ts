@@ -5,6 +5,7 @@ import { MonsterManualService } from '../../services/monster_manual.service';
 import { FactionsService } from '../../services/factions.service';
 import { Character } from '../../models/character';
 
+
 import * as _ from 'lodash';
 // import d20 = require('d20');
 @Component({

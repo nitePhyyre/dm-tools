@@ -11,6 +11,7 @@ import * as _ from 'lodash';
 import { ServicesIndustrialparc } from '../../ServicesIndutrialparc';
 import { EncountersService } from '../../services/encounters.service';
 
+
 @Component({
   selector: 'dm-initiative',
   templateUrl: './combat_management.component.html',
